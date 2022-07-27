@@ -23,9 +23,9 @@
     height: 80vh;
 }
 
-.my_height_head-foot{
-    height: 50px;
+.my_bg_head-foot{
     background-color: #EAEAEA;
+    height: 50px;
 }
 
 .my_5{
@@ -34,3 +34,22 @@
     overflow-y: scroll;
 }
 
+.square{
+    height: 45px;
+    width: 45px;
+}
+
+.square img{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.my_font_size{
+    font-size: 10px;
+    color: #999;
+}
+
+.icon_header i{
+    color: #999;
+}
