@@ -4,7 +4,36 @@
     padding: 0;
 }
 
+/*****************************/
 
+.my_width{
+    width: 100%;
+}
+
+.my_width_footer_1{
+    width: 10%;
+    color: #6B7376;
+}
+.my_width_footer_2{
+    width: 80%;
+}
+
+.square{
+    height: 38px;
+    width: 38px;
+}
+
+.square img{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.active_bg{
+    background-color: #E9EBEB;
+}
+
+/***********CONTENITORI PRINCIPALI*****************/
 .my_1{
     height: 90vh;
     background-color: white;
@@ -13,15 +42,17 @@
 
 .my_2{
     background: #019688;
-    width: 100%;
     height: 20vh;
 }
 
 .my_3{
     background: #DBDBD3;
-    width: 100%;
     height: 80vh;
 }
+
+/*****************************/
+
+
 
 .my_bg_head-foot{
     background-color: #EAEAEA;
@@ -34,22 +65,40 @@
     overflow-y: scroll;
 }
 
-.square{
-    height: 45px;
-    width: 45px;
-}
-
-.square img{
-    border-radius: 50%;
-    object-fit: cover;
-    width: 100%;
-}
-
 .my_font_size{
     font-size: 10px;
+}
+
+.my_font_size_2{
+    font-size: 13px;
+}
+
+.my_color_text{
     color: #999;
 }
 
-.icon_header i{
-    color: #999;
+.my_bg_person{
+    background-color: #8EDAFC;
 }
+
+.square_icon i{
+    color: #8EDAFC;
+}
+
+.my_bg_square_received{
+    height: 40px;
+    width: 42%;
+    background-color: #D5F9BA;
+}
+
+.my_bg_square_sent{
+    height: 40px;
+    width: 42%;
+    background-color: white;
+}
+
+.width_square_message{
+    width: 60%;
+    height: 100%;
+}
+
