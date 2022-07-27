@@ -3,3 +3,34 @@
     margin: 0;
     padding: 0;
 }
+
+
+.my_1{
+    height: 90vh;
+    background-color: white;
+    width: 80%;
+}
+
+.my_2{
+    background: #019688;
+    width: 100%;
+    height: 20vh;
+}
+
+.my_3{
+    background: #DBDBD3;
+    width: 100%;
+    height: 80vh;
+}
+
+.my_height_head-foot{
+    height: 50px;
+    background-color: #EAEAEA;
+}
+
+.my_5{
+    background: url("../img/mine.jpg");
+    height: calc(90vh - 100px);
+    overflow-y: scroll;
+}
+
