@@ -14,10 +14,10 @@
 <body>
     <div id="whatsapp">
         <main class="container d-flex justify-content-center align-items-center mt-3">
-            <div class="container-sm my_1 px-0">
+            <div class="container my_1 px-0">
                 <div class="row g-0 m-0">
     
-                    <div class="col-4">
+                    <div class="col-md-4">
     
                         <header class="my_bg_head-foot align-items-center d-flex">
                             <div class="square rounded-circle border border-0 m-1">
@@ -53,7 +53,7 @@
                             </div>
     
                             
-                            <div @click="selectedContact(person)" class="cursor d-flex my_width border-top overflow-auto" v-for="(person, index) in contacts" :class="(image_profilo == index)?'active_bg':''">
+                            <div @click="selectedContact(person); setActive(index)" class="cursor d-flex my_width border-top overflow-auto" v-for="(person, index) in contacts" :class="(image_profilo == index)?'active_bg':''">
                                 <div class="square rounded-circle border border-0 m-1">
                                     <img :src='getPic(person.avatar)' :alt="index.avatar">
                                 </div>
@@ -74,7 +74,7 @@
     
     
     
-                    <div class="col-8 border-start border-dark">
+                    <div class="col-md-8 border-start border-dark">
     
                         <header class="my_bg_head-foot align-items-center d-flex justify-content-between">
                             <div class="d-flex">
@@ -97,7 +97,7 @@
     
     
                         <main class="container my_5">
-                            <div class="row me-5 mt-4" >
+                            <div class="row me-1 mt-4" >
                                 <div class="col-12 my-2 d-flex flex-column" v-for="item in itemContacts.messages">
                                     <div class="d-flex rounded-1" :class="item.status">
                                         <span class="text-left flex-fill align-self-center my_font_size_2">

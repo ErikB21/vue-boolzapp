@@ -55,12 +55,11 @@ body{
 
 .my_bg_head-foot{
     background-color: #EAEAEA;
-    height: 50px;
 }
 
 .my_5{
     background: url("../img/mine.jpg");
-    height: calc(90vh - 100px);
+    height: calc(90vh - 81px);
     overflow-y: scroll;
 }
 
@@ -86,20 +85,16 @@ body{
 
 .received{
     height: 40px;
-    width: 45%;
+    width: 47%;
     background-color: white;
     align-self: flex-start;
+    padding: 4px;
 }
 
 .sent{
     height: 40px;
-    width: 45%;
+    width: 47%;
     background-color: #D5F9BA;
     align-self: flex-end;
+    padding: 4px;
 }
-
-.width_square_message{
-    width: 60%;
-    height: 100%;
-}
-

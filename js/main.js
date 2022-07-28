@@ -190,20 +190,25 @@ const whatsapp = new Vue(
                 console.log(this.selectedContact.name);
             },
 
+            //al click sul contatto scelto, viene attivata la classe active_bg
+            setActive(indice){
+                this.image_profilo = indice;
+            },
+
 
             //alla pressione di enter, il messaggio che viene scritto apparirà nella chat
             //aggiunta di trim, in modo da non mandare messaggi a vuoto o spaziato
             addMessage() {
                 const chatContact = this.chatContact.trim();
                 if(chatContact.length > 0){
-                    this.contacts[0].messages.push(
+                    this.itemContacts.messages.push(
                         {
                             message: chatContact,
                             status: 'sent'
                         }
                     )
                     this.chatContact = '';
-                }           
+                };   
             },
         }
 
