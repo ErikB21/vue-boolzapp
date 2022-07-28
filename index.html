@@ -53,7 +53,7 @@
                             </div>
     
                             
-                            <div class="cursor d-flex my_width border-top overflow-auto" v-for="(person, index) in contacts" :class="(image_profilo == index)?'active_bg':''">
+                            <div @click="selectedContact(person)" class="cursor d-flex my_width border-top overflow-auto" v-for="(person, index) in contacts" :class="(image_profilo == index)?'active_bg':''">
                                 <div class="square rounded-circle border border-0 m-1">
                                     <img :src='getPic(person.avatar)' :alt="index.avatar">
                                 </div>
@@ -79,11 +79,11 @@
                         <header class="my_bg_head-foot align-items-center d-flex justify-content-between">
                             <div class="d-flex">
                                 <div class="square rounded-circle border-0 m-1">
-                                    <img src="img/avatar_1.jpg" alt="Avatar Michele">
+                                    <img :src="'img/avatar' + itemContacts.avatar + '.jpg'" :alt="itemContacts.name">
                                 </div>
     
                                 <div class="ms-2 align-self-center">
-                                    <span class="fw-bold">Michele</span>
+                                    <span class="fw-bold">{{itemContacts.name}}</span>
                                     <p class="my_color_text my_font_size my-0">Ultimo Accesso oggi alle 12:00</p>
                                 </div>
                             </div>

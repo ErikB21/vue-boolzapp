@@ -184,6 +184,13 @@ const whatsapp = new Vue(
                 return 'img/avatar' + index + '.jpg'; 
             },
 
+            //al click sul contatto, cambia dinamicamente il contatto
+            selectedContact(person){
+                this.itemContacts = person;
+                console.log(this.selectedContact.name);
+            },
+
+
             //alla pressione di enter, il messaggio che viene scritto apparirà nella chat
             //aggiunta di trim, in modo da non mandare messaggi a vuoto o spaziato
             addMessage() {
@@ -197,7 +204,7 @@ const whatsapp = new Vue(
                     )
                     this.chatContact = '';
                 }           
-            },    
+            },
         }
 
 
