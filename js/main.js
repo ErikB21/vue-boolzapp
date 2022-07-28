@@ -176,12 +176,28 @@ const whatsapp = new Vue(
             image_profilo : 0,
             contacts,
             itemContacts: contacts[0],
-            chatContact : 0
+            chatContact : ''
         },
         methods:{
+            //uso per stampare i diversi contatti
             getPic(index) { 
                 return 'img/avatar' + index + '.jpg'; 
             },
+
+            //alla pressione di enter, il messaggio che viene scritto apparirà nella chat
+            //aggiunta di trim, in modo da non mandare messaggi a vuoto o spaziato
+            addMessage() {
+                const chatContact = this.chatContact.trim();
+                if(chatContact.length > 0){
+                    this.contacts[0].messages.push(
+                        {
+                            message: chatContact,
+                            status: 'sent'
+                        }
+                    )
+                    this.chatContact = '';
+                }           
+            },    
         }
 
 
