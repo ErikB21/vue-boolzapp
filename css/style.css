@@ -35,19 +35,14 @@
 
 /***********CONTENITORI PRINCIPALI*****************/
 .my_1{
-    height: 90vh;
+    max-height: 92vh;
     background-color: white;
     width: 80%;
 }
 
-.my_2{
-    background: #019688;
-    height: 20vh;
-}
-
-.my_3{
-    background: #DBDBD3;
-    height: 80vh;
+body{
+    background: linear-gradient(to bottom, #019688 0%, #019688 20%, #DBDBD3 20%, #DBDBD3 100%);
+    height: 100vh;
 }
 
 /*****************************/

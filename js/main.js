@@ -179,7 +179,7 @@ const whatsapp = new Vue(
         methods:{
             getPic(index) { 
                 return 'img/avatar' + index + '.jpg'; 
-            } 
+            }
         }
 
 

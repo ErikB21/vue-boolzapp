@@ -13,8 +13,8 @@
 </head>
 <body>
     <div id="whatsapp">
-        <main class="position-relative">
-            <div class="container-sm my_1 px-0 position-absolute top-50 start-50 translate-middle">
+        <main class="container d-flex justify-content-center align-items-center mt-3">
+            <div class="container-sm my_1 px-0">
                 <div class="row g-0 m-0">
     
                     <div class="col-4">
@@ -36,7 +36,7 @@
     
                         <main class="d-flex flex-direction-column flex-wrap">
                             <div class="d-flex my_bg_person my_width">
-                                <div class="square square_icon bg-light m-1 rounded-circle border border-0 ps-2 position-relative">
+                                <div class="square square_icon bg-light m-1 rounded-circle border-0 ps-2 position-relative">
                                     <i class="fa-solid fa-bell-slash position-absolute top-50 start-50 translate-middle"></i>
                                 </div>
         
@@ -49,11 +49,11 @@
     
                             <div class="d-flex text-center border border-5 bg-light my_width">
                                 <i class="fa-solid fa-magnifying-glass align-self-center my_color_text m-1"></i>
-                                <input type="text" class="border border-0 my_font_size_2 align-self-center my_color_text my_width" required placeholder="Cerca o inizia una nuova chat" >
+                                <input type="text" class="border-0 my_font_size_2 align-self-center my_color_text my_width" required placeholder="Cerca o inizia una nuova chat" >
                             </div>
     
                             
-                            <div class="d-flex my_width border border-bottom" v-for="(person, index) in contacts" :class="(image_profilo == index)?'active_bg':''">
+                            <div class="d-flex my_width border-top overflow-auto" v-for="(person, index) in contacts" :class="(image_profilo == index)?'active_bg':''">
                                 <div class="square rounded-circle border border-0 m-1">
                                     <img :src='getPic(person.avatar)' :alt="index.avatar">
                                 </div>
@@ -78,7 +78,7 @@
     
                         <header class="my_bg_head-foot align-items-center d-flex justify-content-between">
                             <div class="d-flex">
-                                <div class="square rounded-circle border border-0 m-1">
+                                <div class="square rounded-circle border-0 m-1">
                                     <img src="img/avatar_1.jpg" alt="Avatar Michele">
                                 </div>
     
@@ -101,7 +101,7 @@
                                 <div class="col-12 my-2 d-flex justify-content-end">
                                     <div class="my_bg_square_received d-flex rounded-1">
                                         <span class=" text-left ps-2 flex-fill align-self-center my_font_size_2">
-                                            Hai portato a spasso il cane?
+                                            
                                         </span>
                                         <span class="text-right ps-3 my_font_size align-self-end my_color_text">
                                             15:50
@@ -150,15 +150,7 @@
     
                     </div>
                 </div>
-                
-    
-    
-    
-    
-    
             </div>
-            <div class="container-fluid my_2 my_width"></div>
-            <div class="container-fluid my_3 my_width"></div>
             
         </main>
     </div>
