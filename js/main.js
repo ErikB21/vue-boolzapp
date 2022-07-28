@@ -174,12 +174,14 @@ const whatsapp = new Vue(
         el: '#whatsapp',
         data: {
             image_profilo : 0,
-            contacts
+            contacts,
+            itemContacts: contacts[0],
+            chatContact : 0
         },
         methods:{
             getPic(index) { 
                 return 'img/avatar' + index + '.jpg'; 
-            }
+            },
         }
 
 

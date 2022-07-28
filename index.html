@@ -53,14 +53,14 @@
                             </div>
     
                             
-                            <div class="d-flex my_width border-top overflow-auto" v-for="(person, index) in contacts" :class="(image_profilo == index)?'active_bg':''">
+                            <div class="cursor d-flex my_width border-top overflow-auto" v-for="(person, index) in contacts" :class="(image_profilo == index)?'active_bg':''">
                                 <div class="square rounded-circle border border-0 m-1">
                                     <img :src='getPic(person.avatar)' :alt="index.avatar">
                                 </div>
     
                                 <div class="ms-2 align-self-start flex-grow-1">
                                     <span class="fw-bold">{{person.name}}</span>
-                                    <p class="my_color_text my_font_size my-0">Ultimo Messaggio Arrivato</p>
+                                    <p class="my_color_text my_font_size my-0"></p>
                                 </div>
     
                                 <div class="time">
@@ -97,36 +97,14 @@
     
     
                         <main class="container my_5">
-                            <div class="row me-5 mt-4">
-                                <div class="col-12 my-2 d-flex justify-content-end">
-                                    <div class="my_bg_square_received d-flex rounded-1">
-                                        <span class=" text-left ps-2 flex-fill align-self-center my_font_size_2">
-                                            
+                            <div class="row me-5 mt-4" >
+                                <div class="col-12 my-2 d-flex flex-column" v-for="item in itemContacts.messages">
+                                    <div class="d-flex rounded-1" :class="item.status">
+                                        <span class="text-left flex-fill align-self-center my_font_size_2">
+                                            {{item.message}}
                                         </span>
                                         <span class="text-right ps-3 my_font_size align-self-end my_color_text">
                                             15:50
-                                        </span>
-                                    </div>
-                                </div>
-    
-                                <div class="col-12 my-2 me-5 d-flex justify-content-end">
-                                    <div class="my_bg_square_received d-flex rounded-1">
-                                        <span class=" text-left ps-2 flex-fill align-self-center my_font_size_2">
-                                            Ricordati di stendere i panni
-                                        </span>
-                                        <span class="text-right ps-3 my_font_size align-self-end my_color_text">
-                                            15:50
-                                        </span>
-                                    </div>
-                                </div>
-    
-                                <div class="col-12 ms-5 my-3">
-                                    <div class="my_bg_square_sent rounded-1 d-flex">
-                                        <span class=" text-left ps-2 flex-fill align-self-center my_font_size_2">
-                                            Ho fatto tutto!
-                                        </span>
-                                        <span class="text-right ps-3 my_font_size align-self-end my_color_text">
-                                            16:15
                                         </span>
                                     </div>
                                 </div>

@@ -33,6 +33,10 @@
     background-color: #E9EBEB;
 }
 
+.cursor{
+    cursor: pointer;
+}
+
 /***********CONTENITORI PRINCIPALI*****************/
 .my_1{
     max-height: 92vh;
@@ -80,16 +84,18 @@ body{
     color: #8EDAFC;
 }
 
-.my_bg_square_received{
+.received{
     height: 40px;
-    width: 42%;
-    background-color: #D5F9BA;
+    width: 45%;
+    background-color: white;
+    align-self: flex-start;
 }
 
-.my_bg_square_sent{
+.sent{
     height: 40px;
-    width: 42%;
-    background-color: white;
+    width: 45%;
+    background-color: #D5F9BA;
+    align-self: flex-end;
 }
 
 .width_square_message{
