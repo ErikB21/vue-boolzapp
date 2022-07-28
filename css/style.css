@@ -53,9 +53,7 @@ body{
 
 
 
-.my_bg_head-foot{
-    background-color: #EAEAEA;
-}
+
 
 .my_5{
     background: url("../img/mine.jpg");
@@ -71,16 +69,13 @@ body{
     font-size: 13px;
 }
 
-.my_color_text{
-    color: #999;
+
+.square_icon i{
+    color: #8EDAFC;
 }
 
 .my_bg_person{
     background-color: #8EDAFC;
-}
-
-.square_icon i{
-    color: #8EDAFC;
 }
 
 .received{
@@ -97,4 +92,32 @@ body{
     background-color: #D5F9BA;
     align-self: flex-end;
     padding: 4px;
+}
+
+.my_bg_head-foot2{
+    background-color: #6B7376;
+    color: white;
+}
+
+.my_color_text{
+    color: black;
+}
+
+.hov_bord:hover{
+    border: none;
+}
+
+@media  screen and (min-width:769px) {
+    .my_bg_head-foot{
+        background-color: #EAEAEA;
+    }
+
+    .my_bg_head-foot2{
+        background-color: none;
+        color: black;
+    }
+    
+    .my_color_text{
+        color: #999;
+    }
 }

@@ -35,7 +35,7 @@
     
     <!---------------------------------------------Main_inizio----------------------------------------------------->
                         <main class="d-flex flex-direction-column flex-wrap">
-                            <div class="d-flex my_bg_person my_width">
+                            <div class="d-none d-md-flex my_bg_person my_width">
                                 <div class="square square_icon bg-light m-1 rounded-circle border-0 ps-2 position-relative">
                                     <i class="fa-solid fa-bell-slash position-absolute top-50 start-50 translate-middle"></i>
                                 </div>
@@ -55,8 +55,8 @@
     <!---------------------------------------------Main_lista Contatti----------------------------------------------------->
     
                             <!-----------------------Main_lista Contatti_Immagine------------------>  
-                                                  
-                            <div @click="selectedContact(person); setActive(index)" class="cursor d-flex my_width border-top overflow-auto" v-for="(person, index) in contacts" :class="(image_profilo == index)?'active_bg':''">
+
+                            <div @click="selectedContact(person); setActive(index)" class=" d-none cursor d-md-flex my_width border-top overflow-auto" v-for="(person, index) in contacts" :class="(image_profilo == index)?'active_bg':''">
                                 <div class="square rounded-circle border border-0 m-1">
                                     <img :src='getPic(person.avatar)' :alt="index.avatar">
                                 </div>
@@ -73,7 +73,7 @@
                                 <!-----------------------Main_lista Contatti_Orario Ultimo Messaggio------------------>                  
 
                                 <div class="time">
-                                    <span class="me-2 my_font_size my_color_text">12:00</span>
+                                    <span class="me-2 my_font_size my_color_text">{{lastRecivedMessageData(person)}}</span>
                                 </div>
                             </div>
                         </main>
@@ -85,7 +85,7 @@
     
                     <div class="col-md-8 border-start border-dark">
     
-                        <header class="my_bg_head-foot align-items-center d-flex justify-content-between">
+                        <header class="my_bg_head-foot my_bg_head-foot2 align-items-center d-flex justify-content-between">
                             <div class="d-flex">
 
                                 <!---------------------------------------------Header_Chat_Foto ----------------------------------------------------->
@@ -98,7 +98,7 @@
 
                                 <div class="ms-2 align-self-center">
                                     <span class="fw-bold">{{itemContacts.name}}</span>
-                                    <p class="my_color_text my_font_size my-0">Ultimo Accesso oggi alle 12:00</p>
+                                    <p class="my_color_text my_font_size my-0">Ultimo Accesso oggi alle {{lastRecivedMessageData(itemContacts)}}</p>
                                 </div>
                             </div>
     
@@ -120,7 +120,7 @@
                                             {{item.message}}
                                         </span>
                                         <span class="text-right ps-3 my_font_size align-self-end my_color_text">
-                                            
+                                            {{editDateToTime(item.date)}}
                                         </span>
                                     </div>
                                 </div>
@@ -137,7 +137,7 @@
                               <!---------------------------------------------Footer_Chat_Input scrivi un messaggio----------------------------------------------------->
 
                             <div class="my_width_footer_2">
-                                <input type="text" @keyup.enter="addMessage()" v-model="chatContact" class="my_width m-1 rounded-1 border-0 p-1 my_font_size_2" placeholder="Scrivi un messaggio">
+                                <input type="text" @keyup.enter="addMessage()" v-model="chatContact" class="my_width m-1 rounded-1 border-0 p-1 my_font_size_2 hov_bord" placeholder="Scrivi un messaggio">
                             </div>
     
                             <div class="my_width_footer_1 m-1 text-center">

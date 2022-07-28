@@ -198,18 +198,57 @@ const whatsapp = new Vue(
 
             //alla pressione di enter, il messaggio che viene scritto apparirà nella chat
             //aggiunta di trim, in modo da non mandare messaggi a vuoto o spaziato
+            //new Date per stampare l'ora dei messaggi vecchi e correnti
             addMessage() {
                 const chatContact = this.chatContact.trim();
                 if(chatContact.length > 0){
                     this.itemContacts.messages.push(
                         {
+                            date: new Date().toLocaleString(),
                             message: chatContact,
                             status: 'sent'
                         }
                     )
                     this.chatContact = '';
-                };   
+                };  
+
+                //setTimeout, per stampare la risposta dell'interlocutore
+                //new Date per stampare l'ora dei messaggi vecchi e correnti
+                setTimeout(() => {
+                    
+                    this.itemContacts.messages.push({
+    
+                        date: new Date().toLocaleString(),
+                        message: 'Ok!',
+                        status: 'received'
+    
+                    })
+                }, 2000) 
             },
+
+            //questa funzione modifica il formato date e richiamato nel DOM 
+            editDateToTime: function (date) {
+                date = date.split(" ");
+                let time = date[1].split(":");
+                return `${time[0]}:${time[1]}`;
+            },
+            // questa funzione permette di stampare nella lsita contatti l'orario dell'ultimo messaggio
+            lastRecivedMessageData: function (contact) {
+                    console.log(contact);
+                    let lastMessage;
+                    let index = contact.messages.length - 1;
+                    while (lastMessage === undefined) {
+                        let message = contact.messages[index];
+                        if (message.status === "received") {
+                            lastMessage = message;
+                            break;
+                        }
+                        index--;
+                    }
+                    lastMessage = this.editDateToTime(lastMessage.date);
+                    return lastMessage;
+            },
+           
         }
 
 
