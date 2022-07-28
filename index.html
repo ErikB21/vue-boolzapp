@@ -33,7 +33,7 @@
                             </div>
                         </header>
     
-    
+    <!---------------------------------------------Main_inizio----------------------------------------------------->
                         <main class="d-flex flex-direction-column flex-wrap">
                             <div class="d-flex my_bg_person my_width">
                                 <div class="square square_icon bg-light m-1 rounded-circle border-0 ps-2 position-relative">
@@ -52,17 +52,26 @@
                                 <input type="text" class="border-0 my_font_size_2 align-self-center my_color_text my_width" placeholder="Cerca o inizia una nuova chat" required>
                             </div>
     
-                            
+    <!---------------------------------------------Main_lista Contatti----------------------------------------------------->
+    
+                            <!-----------------------Main_lista Contatti_Immagine------------------>  
+                                                  
                             <div @click="selectedContact(person); setActive(index)" class="cursor d-flex my_width border-top overflow-auto" v-for="(person, index) in contacts" :class="(image_profilo == index)?'active_bg':''">
                                 <div class="square rounded-circle border border-0 m-1">
                                     <img :src='getPic(person.avatar)' :alt="index.avatar">
                                 </div>
+
+                                
+                                 <!-----------------------Main_lista Contatti_Nome e Ultimo Messaggio Inviato------------------>                  
     
                                 <div class="ms-2 align-self-start flex-grow-1">
                                     <span class="fw-bold">{{person.name}}</span>
                                     <p class="my_color_text my_font_size my-0"></p>
                                 </div>
     
+                                
+                                <!-----------------------Main_lista Contatti_Orario Ultimo Messaggio------------------>                  
+
                                 <div class="time">
                                     <span class="me-2 my_font_size my_color_text">12:00</span>
                                 </div>
@@ -72,16 +81,21 @@
                     </div>
     
     
-    
+    <!---------------------------------------------Header_Chat Contatti----------------------------------------------------->
     
                     <div class="col-md-8 border-start border-dark">
     
                         <header class="my_bg_head-foot align-items-center d-flex justify-content-between">
                             <div class="d-flex">
+
+                                <!---------------------------------------------Header_Chat_Foto ----------------------------------------------------->
+
                                 <div class="square rounded-circle border-0 m-1">
                                     <img :src="'img/avatar' + itemContacts.avatar + '.jpg'" :alt="itemContacts.name">
                                 </div>
-    
+
+                                <!---------------------------------------------Header_Chat_Nome ----------------------------------------------------->
+
                                 <div class="ms-2 align-self-center">
                                     <span class="fw-bold">{{itemContacts.name}}</span>
                                     <p class="my_color_text my_font_size my-0">Ultimo Accesso oggi alle 12:00</p>
@@ -95,9 +109,11 @@
                             </div>
                         </header>
     
-    
+    <!---------------------------------------------Main_Chat Contatti----------------------------------------------------->
                         <main class="container my_5">
                             <div class="row me-1 mt-4" >
+
+                                <!---------------------------------------------Main_Chat_Messaggio e orario invio messaggio----------------------------------------------------->
                                 <div class="col-12 my-2 d-flex flex-column" v-for="item in itemContacts.messages">
                                     <div class="d-flex rounded-1" :class="item.status">
                                         <span class="text-left flex-fill align-self-center my_font_size_2">
@@ -111,12 +127,15 @@
                             </div>
                         </main>
     
-    
+
+     <!---------------------------------------------Footer_Chat Contatti----------------------------------------------------->
                         <footer class="my_bg_head-foot d-flex justify-content-between align-items-center">
                             <div class="my_width_footer_1 m-1 text-center">
                                 <i class="fa-solid fa-face-smile"></i>
                             </div>
     
+                              <!---------------------------------------------Footer_Chat_Input scrivi un messaggio----------------------------------------------------->
+
                             <div class="my_width_footer_2">
                                 <input type="text" @keyup.enter="addMessage()" v-model="chatContact" class="my_width m-1 rounded-1 border-0 p-1 my_font_size_2" placeholder="Scrivi un messaggio">
                             </div>
