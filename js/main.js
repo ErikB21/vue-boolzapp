@@ -263,6 +263,7 @@ const whatsapp = new Vue(
                 })
             },
 
+            //funzioni adibite a stampare l'ultimo messaggio nella Lista Contatti
             lastMessageElement(person){
                 const messages = person.messages;
                 const lastMessages = (messages.length > 0) ? messages[messages.length - 1]: undefined;

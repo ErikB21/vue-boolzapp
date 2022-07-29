@@ -13,6 +13,7 @@
     --bg-gray: #6B7376;
     --bg-light-green: #D5F9BA;
     --color-black : black;
+    --color-bg-error: rgb(235, 21, 21, 0.7);
 }
 
 /***********Contenitori Principali************/
@@ -112,6 +113,10 @@ body{
 
 .foc_bord{
     outline: none;
+}
+
+.my_var_bg_error{
+    background-color: var(--color-bg-error);
 }
 
 /**************Media Query per background-color***************/
