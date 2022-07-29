@@ -19,7 +19,7 @@
 /***********Contenitori Principali************/
 
 .my_1{
-    max-height: 90vh;
+    height: 549px;
     background-color: var(--bg-container-white);
     width: 80%;
 }
@@ -83,7 +83,7 @@ body{
 
 .my_5{
     background: url("../img/mine.jpg");
-    height: calc(90vh - 81px);
+    height: calc(549px - 81px);
     overflow-y: auto;
 }
 
