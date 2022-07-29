@@ -4,7 +4,31 @@
     padding: 0;
 }
 
-/*****************************/
+
+/*************Rotte Colori****************/
+
+:root{
+    --bg-container-white : white;
+    --bg-color-azzurro: #8EDAFC;
+    --bg-gray: #6B7376;
+    --bg-light-green: #D5F9BA;
+    --color-black : black;
+}
+
+/***********Contenitori Principali************/
+
+.my_1{
+    max-height: 92vh;
+    background-color: var(--bg-container-white);
+    width: 80%;
+}
+
+body{
+    background: linear-gradient(to bottom, #019688 0%, #019688 20%, #DBDBD3 20%, #DBDBD3 100%);
+    height: 100vh;
+}
+
+/*************Classi Riutilizzate****************/
 
 .my_width{
     width: 100%;
@@ -37,30 +61,6 @@
     cursor: pointer;
 }
 
-/***********CONTENITORI PRINCIPALI*****************/
-.my_1{
-    max-height: 92vh;
-    background-color: white;
-    width: 80%;
-}
-
-body{
-    background: linear-gradient(to bottom, #019688 0%, #019688 20%, #DBDBD3 20%, #DBDBD3 100%);
-    height: 100vh;
-}
-
-/*****************************/
-
-
-
-
-
-.my_5{
-    background: url("../img/mine.jpg");
-    height: calc(90vh - 81px);
-    overflow-y: scroll;
-}
-
 .my_font_size{
     font-size: 10px;
 }
@@ -69,19 +69,35 @@ body{
     font-size: 13px;
 }
 
+.my_bg_head-foot2{
+    background-color: var(--bg-gray);
+    color: var(--bg-container-white);
+}
+
+.my_color_text{
+    color: var(--color-black);
+}
+
+/************Altre Classi*****************/
+
+.my_5{
+    background: url("../img/mine.jpg");
+    height: calc(90vh - 81px);
+    overflow-y: scroll;
+}
 
 .square_icon i{
-    color: #8EDAFC;
+    color: var(--bg-color-azzurro-azzurro);
 }
 
 .my_bg_person{
-    background-color: #8EDAFC;
+    background-color: var(--bg-color-azzurro);
 }
 
 .received{
     height: 40px;
     width: 47%;
-    background-color: white;
+    background-color: var(--bg-container-white);
     align-self: flex-start;
     padding: 4px;
 }
@@ -89,23 +105,16 @@ body{
 .sent{
     height: 40px;
     width: 47%;
-    background-color: #D5F9BA;
+    background-color: var(--bg-light-green);
     align-self: flex-end;
     padding: 4px;
 }
 
-.my_bg_head-foot2{
-    background-color: #6B7376;
-    color: white;
+.foc_bord{
+    outline: none;
 }
 
-.my_color_text{
-    color: black;
-}
-
-.hov_bord:hover{
-    border: none;
-}
+/**************Media Query per background-color***************/
 
 @media  screen and (min-width:769px) {
     .my_bg_head-foot{
@@ -114,7 +123,7 @@ body{
 
     .my_bg_head-foot2{
         background-color: none;
-        color: black;
+        color: var(--color-black) ;
     }
     
     .my_color_text{
