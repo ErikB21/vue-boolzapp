@@ -18,7 +18,7 @@
 /***********Contenitori Principali************/
 
 .my_1{
-    max-height: 92vh;
+    max-height: 90vh;
     background-color: var(--bg-container-white);
     width: 80%;
 }
@@ -83,7 +83,7 @@ body{
 .my_5{
     background: url("../img/mine.jpg");
     height: calc(90vh - 81px);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .square_icon i{
@@ -96,7 +96,7 @@ body{
 
 .received{
     height: 40px;
-    width: 47%;
+    width: 52%;
     background-color: var(--bg-container-white);
     align-self: flex-start;
     padding: 4px;
@@ -104,7 +104,7 @@ body{
 
 .sent{
     height: 40px;
-    width: 47%;
+    width: 52%;
     background-color: var(--bg-light-green);
     align-self: flex-end;
     padding: 4px;
@@ -130,3 +130,18 @@ body{
         color: #999;
     }
 }
+
+.my_5::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+.my_5::-webkit-scrollbar-track {
+    background: #E5DDD5;        /* color of the tracking area */
+}
+  
+.my_5::-webkit-scrollbar-thumb {
+    background-color: var(--bg-gray);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 1px solid #E5DDD5;  /* creates padding around scroll thumb */
+}
+

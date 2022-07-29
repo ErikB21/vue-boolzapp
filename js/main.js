@@ -226,13 +226,14 @@ const whatsapp = new Vue(
                 }, 2000) 
             },
 
-            //questa funzione modifica il formato date e richiamato nel DOM 
+            //questa funzione modifica il formato date 
             editDateToTime: function (date) {
                 date = date.split(" ");
                 let time = date[1].split(":");
                 return `${time[0]}:${time[1]}`;
             },
-            // questa funzione permette di stampare nella lsita contatti l'orario dell'ultimo messaggio
+
+            // questa funzione permette di stampare nella lsita contatti/ultimo accesso l'orario dell'ultimo messaggio
             lastRecivedMessageData: function (contact) {
                     console.log(contact);
                     let lastMessage;
@@ -248,6 +249,21 @@ const whatsapp = new Vue(
                     lastMessage = this.editDateToTime(lastMessage.date);
                     return lastMessage;
             },
+
+            //cerca contatto tramite ricerca lettere
+            startSearchContact(){
+                const search = document.querySelector('#searchContact').value.toLowerCase();
+                const contact = this.contacts;
+                contact.forEach((contact) =>{
+                    if(contact.name.toLowerCase().includes(search)){
+                        contact.visible = true;
+                    }else{
+                        contact.visible = false;
+                    }
+                })
+            }
+
+            
            
         }
 

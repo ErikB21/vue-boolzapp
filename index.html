@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    
 
 </head>
 <body>
@@ -50,14 +50,14 @@
     
                             <div class="d-flex text-center border border-5 bg-light my_width">
                                 <i class="fa-solid fa-magnifying-glass align-self-center my_color_text m-1"></i>
-                                <input type="text" class="border-0 my_font_size_2 align-self-center my_color_text my_width foc_bord" placeholder="Cerca o inizia una nuova chat" required>
+                                <input type="text" id="searchContact" @keyup="startSearchContact()" class="border-0 my_font_size_2 align-self-center my_color_text my_width foc-bord" placeholder="Cerca o inizia una nuova chat" required>
                             </div>
     
     <!---------------------------------------------Main_lista Contatti----------------------------------------------------->
     
                             <!-----------------------Main_lista Contatti_Immagine------------------>  
 
-                            <div @click="selectedContact(person); setActive(index)" class=" d-none cursor d-md-flex my_width border-top overflow-auto" v-for="(person, index) in contacts" :class="(image_profilo == index)?'active_bg':''">
+                            <div @click="selectedContact(person); setActive(index)" v-if="person.visible" class="d-none cursor d-md-flex my_width border-top overflow-auto" v-for="(person, index) in contacts" :class="(image_profilo == index)?'active_bg':''">
                                 <div class="square rounded-circle border border-0 m-1">
                                     <img :src='getPic(person.avatar)' :alt="index.avatar">
                                 </div>
@@ -153,7 +153,7 @@
         </main>
     </div>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
