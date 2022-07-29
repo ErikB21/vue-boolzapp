@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*************Rotte Colori****************/
+
+:root{
+    --bg-container-white : white;
+    --bg-color-azzurro: #8EDAFC;
+    --bg-gray: #6B7376;
+    --bg-light-green: #D5F9BA;
+    --color-black : black;
+    --color-bg-error: rgb(235, 21, 21, 0.7);
+}
+
+/***********Contenitori Principali************/
+
+.my_1{
+    max-height: 90vh;
+    background-color: var(--bg-container-white);
+    width: 80%;
+}
+
+body{
+    background: linear-gradient(to bottom, #019688 0%, #019688 20%, #DBDBD3 20%, #DBDBD3 100%);
+    height: 100vh;
+}
+
+/*************Classi Riutilizzate****************/
+
+.my_width{
+    width: 100%;
+}
+
+.my_width_footer_1{
+    width: 10%;
+    color: #6B7376;
+}
+.my_width_footer_2{
+    width: 80%;
+}
+
+.square{
+    height: 38px;
+    width: 38px;
+}
+
+.square img{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.active_bg{
+    background-color: #E9EBEB;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.my_font_size{
+    font-size: 10px;
+}
+
+.my_font_size_2{
+    font-size: 13px;
+}
+
+.my_bg_head-foot2{
+    background-color: var(--bg-gray);
+    color: var(--bg-container-white);
+}
+
+.my_color_text{
+    color: var(--color-black);
+}
+
+/************Altre Classi*****************/
+
+.my_5{
+    background: url("../img/mine.jpg");
+    height: calc(90vh - 81px);
+    overflow-y: auto;
+}
+
+.square_icon i{
+    color: var(--bg-color-azzurro-azzurro);
+}
+
+.my_bg_person{
+    background-color: var(--bg-color-azzurro);
+}
+
+.received{
+    height: 40px;
+    width: 45%;
+    background-color: var(--bg-container-white);
+    align-self: flex-start;
+    padding: 4px;
+}
+
+.sent{
+    height: 40px;
+    width: 45%;
+    background-color: var(--bg-light-green);
+    align-self: flex-end;
+    padding: 4px;
+}
+
+.foc_bord{
+    outline: none;
+}
+
+.my_var_bg_error{
+    background-color: var(--color-bg-error);
+}
+
+/**************Media Query per background-color***************/
+
+@media  screen and (min-width:769px) {
+    .my_bg_head-foot{
+        background-color: #EAEAEA;
+    }
+
+    .my_bg_head-foot2{
+        background-color: none;
+        color: var(--color-black) ;
+    }
+    
+    .my_color_text{
+        color: #999;
+    }
+}
+
+.my_5::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+.my_5::-webkit-scrollbar-track {
+    background: #E5DDD5;        /* color of the tracking area */
+}
+  
+.my_5::-webkit-scrollbar-thumb {
+    background-color: var(--bg-gray);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 1px solid #E5DDD5;  /* creates padding around scroll thumb */
+}
+
