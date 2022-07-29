@@ -50,7 +50,7 @@
     
                             <div class="d-flex text-center border border-5 bg-light my_width">
                                 <i class="fa-solid fa-magnifying-glass align-self-center my_color_text m-1"></i>
-                                <input type="text" id="searchContact" @keyup="startSearchContact()" class="border-0 my_font_size_2 align-self-center my_color_text my_width foc-bord" placeholder="Cerca o inizia una nuova chat" required>
+                                <input type="text" id="searchContact" @keyup="startSearchContact()" class="border-0 my_font_size_2 align-self-center my_color_text my_width foc_bord" placeholder="Cerca o inizia una nuova chat" required>
                             </div>
     
     <!---------------------------------------------Main_lista Contatti----------------------------------------------------->
@@ -67,7 +67,7 @@
     
                                 <div class="ms-2 align-self-start flex-grow-1">
                                     <span class="fw-bold">{{person.name}}</span>
-                                    <p class="my_color_text my_font_size my-0"></p>
+                                    <p class="my_color_text my_font_size my-0">{{lastMessage(person)}}</p>
                                 </div>
     
                                 
@@ -116,7 +116,7 @@
 
                                 <!---------------------------------------------Main_Chat_Messaggio e orario invio messaggio----------------------------------------------------->
                                 <div class="col-12 my-2 d-flex flex-column" v-for="item in itemContacts.messages">
-                                    <div class="d-flex rounded-1" :class="item.status">
+                                    <div class="d-flex flex-wrap rounded-1" :class="item.status">
                                         <span class="text-left flex-fill align-self-center my_font_size_2">
                                             {{item.message}}
                                         </span>

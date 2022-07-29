@@ -261,6 +261,18 @@ const whatsapp = new Vue(
                         contact.visible = false;
                     }
                 })
+            },
+
+            lastMessageElement(person){
+                const messages = person.messages;
+                const lastMessages = (messages.length > 0) ? messages[messages.length - 1]: undefined;
+                return lastMessages;
+            },
+
+            lastMessage(person){
+                const message = this.lastMessageElement(person);
+                const lastMessage = (message) ? message.message : '';
+                return lastMessage;
             }
 
             

@@ -96,7 +96,7 @@ body{
 
 .received{
     height: 40px;
-    width: 52%;
+    width: 45%;
     background-color: var(--bg-container-white);
     align-self: flex-start;
     padding: 4px;
@@ -104,7 +104,7 @@ body{
 
 .sent{
     height: 40px;
-    width: 52%;
+    width: 45%;
     background-color: var(--bg-light-green);
     align-self: flex-end;
     padding: 4px;
