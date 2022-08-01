@@ -277,7 +277,7 @@ const whatsapp = new Vue(
             },
 
             //mi permette di eliminare il messaggio
-            deleteMessage: function(messageIndex) {
+            deleteMessage(messageIndex) {
                 this.itemContacts.messages.splice(messageIndex, 1 );
             },
 
