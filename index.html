@@ -116,14 +116,24 @@
                             <div class="row me-1 mt-4" >
 
                                 <!---------------------------------------------Main_Chat_Messaggio e orario invio messaggio----------------------------------------------------->
-                                <div class="col-12 my-2 d-flex flex-column" v-for="item in itemContacts.messages">
-                                    <div class="d-flex flex-wrap rounded-1" :class="item.status">
-                                        <span class="text-left flex-fill align-self-center my_font_size_2">
-                                            {{item.message}}
-                                        </span>
-                                        <span class="text-right ps-3 my_font_size align-self-end my_color_text">
-                                            {{editDateToTime(item.date)}}
-                                        </span>
+                                <div class="col-12 my-2 d-flex flex-column dropdown" v-for="item in itemContacts.messages">
+                                    <div class="rounded-1" :class="item.status">
+                                        <a class="text-decoration-none d-flex" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="text-left flex-fill align-self-center py-2 my_font_size_2 text-dark">
+                                                {{item.message}}
+                                            </span>
+                                            <span class="text-right ps-3 my_font_size align-self-end my_color_text">
+                                                {{editDateToTime(item.date)}}
+                                            </span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Info Messaggio <i class="fa-solid fa-circle-info my_color_text"></i></a></li>
+                                            <li>
+                                                <a @click="deleteMessage(image_profilo, currentMessage)" class="dropdown-item" href="#">Elimina Messaggio 
+                                                    <i class="fa-solid fa-trash text-danger ps-2"></i>
+                                                </a>
+                                            </li> 
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -154,6 +164,7 @@
         </main>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
