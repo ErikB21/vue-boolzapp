@@ -274,7 +274,12 @@ const whatsapp = new Vue(
                 const message = this.lastMessageElement(person);
                 const lastMessage = (message) ? message.message : '';
                 return lastMessage;
-            }
+            },
+
+            //mi permette di eliminare il messaggio
+            deleteMessage: function(index, messageIndex) {
+                this.contacts[index].messages.splice(messageIndex, 1 );
+            },
 
             
            
