@@ -57,7 +57,7 @@
     
                             <!-----------------------Main_lista Contatti_Immagine------------------>  
 
-                            <div @click="selectedContact(person); setActive(index)" v-if="person.visible" class="d-none cursor d-md-flex my_width border-top overflow-auto" v-for="(person, index) in contacts" :class="(image_profilo == index)?'active_bg':''">
+                            <div @click="selectedContact(person); setActive(index)" v-if="person.visible === true" class="d-none cursor d-md-flex my_width border-top overflow-auto" v-for="(person, index) in contacts" :class="(image_profilo == index)?'active_bg':''">
                                 <div class="square rounded-circle border border-0 m-1">
                                     <img :src='getPic(person.avatar)' :alt="index.avatar">
                                 </div>
@@ -76,12 +76,14 @@
                                 <div class="time">
                                     <span class="me-2 my_font_size my_color_text">{{lastRecivedMessageData(person)}}</span>
                                 </div>
+
+                                <!--Se in contacts la visible è falsa, mi stamperà un messaggio con 0 contatti trovati-->
+                                <div class="d-none cursor d-md-flex justify-content-center pt-2 my_width my_var_bg_error border-top overflow-auto" v-if="person.visible === false">
+                                    <p class="fw-bold">0 Contatti trovati</p>
+                                </div>
                             </div>
 
-                            <!--Se in contacts la visible è falsa, mi stamperà un messaggio con 0 contatti trovati-->
-                            <div class="d-none cursor d-md-flex justify-content-center pt-2 my_width my_var_bg_error border-top overflow-auto" v-if="(itemContacts.visible === false)">
-                                <p class="fw-bold">0 Contatti trovati</p>
-                            </div>
+                            
                                                                 
                         </main>
     
