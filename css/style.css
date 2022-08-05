@@ -79,6 +79,18 @@ body{
     color: var(--color-black);
 }
 
+
+.my_class_for_large{
+    height: 200px;
+    width: 590px;
+}
+
+
+
+.d_none{
+    display: none;
+}
+
 /************Altre Classi*****************/
 
 .my_5{
@@ -96,15 +108,25 @@ body{
 }
 
 .received{
-    height: 40px;
+    display: flex;
+    justify-content: space-between;
     width: 47%;
     background-color: var(--bg-container-white);
     align-self: flex-start;
     padding: 4px;
 }
 
+.my_flex{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
 .sent{
-    height: 40px;
+    display: flex;
+    justify-content: space-between;
     width: 47%;
     background-color: var(--bg-light-green);
     align-self: flex-end;
@@ -117,6 +139,17 @@ body{
 
 .my_var_bg_error{
     background-color: var(--color-bg-error);
+}
+
+.my_emoji_width{
+    margin-bottom: 2px;
+}
+
+.my_emoji_width div{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 /**************Media Query per background-color***************/

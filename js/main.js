@@ -178,6 +178,14 @@ const whatsapp = new Vue(
             contacts,
             itemContacts: contacts[0],
             chatContact : ''
+            // messageRandom: [
+            //     'Bravo',
+            //     'Ma scherzi?',
+            //     'E piano piano mi sentì..malvagioo!',
+            //     'Disperazione',
+            //     'Sono triste..',
+            //     'Ciaoooooooooone'
+            // ]
         },
         methods:{
             //uso per stampare i diversi contatti
@@ -216,7 +224,7 @@ const whatsapp = new Vue(
                 //setTimeout, per stampare la risposta dell'interlocutore
                 //new Date per stampare l'ora dei messaggi vecchi e correnti
                 setTimeout(() => {
-                    
+
                     this.itemContacts.messages.push({
     
                         date: new Date().toLocaleString(),
@@ -279,7 +287,7 @@ const whatsapp = new Vue(
 
             //mi permette di eliminare il messaggio
             deleteMessage(messageIndex) {
-                this.itemContacts.messages.splice(messageIndex, 1 );
+                this.itemContacts.messages.splice(messageIndex, 1);
             },
 
             

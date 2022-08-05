@@ -116,15 +116,16 @@
                             <div class="row me-1 mt-4" >
 
                                 <!---------------------------------------------Main_Chat_Messaggio e orario invio messaggio----------------------------------------------------->
-                                <div class="col-12 my-2 d-flex flex-column dropdown" v-for="item in itemContacts.messages">
+                                <div class="col-12 my-2 d-flex flex-column" v-for="item in itemContacts.messages">
                                     <div class="rounded-1" :class="item.status">
-                                        <a class="text-decoration-none d-flex" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <span class="text-left flex-fill align-self-center py-2 my_font_size_2 text-dark">
+                                        <a class="text-decoration-none d-flex justify-content-between" href="#" >
+                                            <div class="text-left flex-fill align-self-center py-2 my_font_size_2 text-dark">
                                                 {{item.message}}
-                                            </span>
-                                            <span class="text-right ps-3 my_font_size align-self-end my_color_text">
-                                                {{editDateToTime(item.date)}}
-                                            </span>
+                                            </div>
+                                            <div class="text-right ps-3 my_font_size align-self-end my_color_text my_flex">
+                                                <a href="" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="text-dark dropdown"><i class="fa-solid fa-ellipsis-vertical align-self-end"></i></a>
+                                                <p class="align-self-end m-0">{{editDateToTime(item.date)}}</p>
+                                            </div>
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="#">Info Messaggio <i class="fa-solid fa-circle-info my_color_text"></i></a></li>
